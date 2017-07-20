@@ -45,7 +45,7 @@ class App extends Component {
 
     componentDidMount() {
         this.interval = setInterval(() => this.setState({now: Date.now()}), 1000);
-        fetch('/json/sl')
+        fetch('/json/sl?locations=9001')
             .then(response => response.json())
             .then(json => {
                 this.setState({
