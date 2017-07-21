@@ -21,7 +21,7 @@ class App extends Component {
                 <div className="App-header">
                     <h2>Stockholm City</h2>
                 </div>
-                <h3>T-bana</h3>
+                <h3>Tunnelbana</h3>
                 <table style={{width: '90%'}}>
                     <colgroup>
                         <col style={{width: '30%'}}/>
