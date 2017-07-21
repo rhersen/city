@@ -9,12 +9,16 @@ class App extends Component {
     }
 
     render() {
-        const tr = t =>
-            <tr key={t.TimeTabledDateTime}>
+        const tr = t => {
+            const d = differenceInSeconds(t.ExpectedDateTime, this.state.now)
+            const s = d % 60
+            const m = d - s
+            return <tr key={t.TimeTabledDateTime}>
                 <td>{t.ExpectedDateTime.substr(11)}</td>
-                <td>{differenceInSeconds(t.ExpectedDateTime, this.state.now)}</td>
+                <td>{m / 60}:{s < 10 ? '0' : ''}{s}</td>
                 <td>{t.Destination}</td>
             </tr>
+        }
 
         return (
             <div className="App">
