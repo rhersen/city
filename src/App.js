@@ -56,7 +56,7 @@ class App extends Component {
                     metros: json.ResponseData.Metros
                         .filter(metro => metro.Destination === 'Hjulsta'),
                     trains: json.ResponseData.Trains
-                        .filter(train => train.LineNumber === '35')
+                        .filter(train => /43/.test(train.LineNumber))
                         .filter(train => train.JourneyDirection === 2)
                 })
             })
